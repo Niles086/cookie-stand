@@ -22,6 +22,7 @@ seattle.customerTotal();
 seattle.cookieTotal();
 console.log(seattle);
 // Tokyo sales data
+
 let tokyo = {
     name: 'Tokyo',
     //Customers, and cookies per hour estimated
@@ -102,8 +103,8 @@ lima.cookieTotal();
 console.log(lima);
 
 
-// Function creates stores hourly sales numbers for the day
-function salesNumbers(location) {
+// Function creates stores sales hours
+function salesHours(location) {
     for (let hour = 7; hour <= 20; hour++) {
         const randomCustomers = getRandomNumber(location.minCustomers, location.maxCustomers);
         const cookiesSold = Math.round(randomCustomers * location.aveCookie);
@@ -111,17 +112,14 @@ function salesNumbers(location) {
     }
 }
 
-// call for sales numbers function
-salesNumbers(seattle);
-salesNumbers(tokyo);
-salesNumbers(dubai);
-salesNumbers(paris);
-salesNumbers(lima);
+// call for sales Hours function
+salesHours(seattle);
+salesHours(tokyo);
+salesHours(dubai);
+salesHours(paris);
+salesHours(lima);
 
-// // total sales for day
-// this.calculateTotalCookies = function salesTotalAll (location) {
-//     return location.cookieTotalPerHour.reduce((total, data) => total + data.cookies, 0);
-// };
+
 
 // random number generator
 function getRandomNumber(min, max) {
@@ -149,7 +147,7 @@ let ul = document.createElement('ul');
 for (let i = 1; i < localSales.cookieTotalPerHour.length; i++) {
     const li = document.createElement('li');
     li.textContent = hours[i] + ': ' + localSales.cookieTotalPerHour[i] + ' cookies';
-    ul.appendChild(li);
+       ul.appendChild(li);
 
 }
 
@@ -162,3 +160,4 @@ renderSales(tokyo);
 renderSales(dubai);
 renderSales(paris);
 renderSales(lima);
+
