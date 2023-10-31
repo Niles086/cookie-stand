@@ -1,6 +1,8 @@
 // sales data functions 
+
 'use strict';
-let hours = ['','6AM','7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM']
+
+let hours = ['', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM']
 
 //seattle sales data object
 let seattle = {
@@ -124,12 +126,12 @@ salesHours(lima);
 // random number generator
 function getRandomNumber(min, max) {
     let num = max - min + 1;
-    
+
     let randomFloat = Math.random() * num;
     let randomInt = Math.floor(randomFloat);
-    
+
     let result = randomInt + min;
-    
+
     return result;
 }
 
@@ -137,19 +139,19 @@ function getRandomNumber(min, max) {
 let salesContainerElement = document.getElementById('salesDataByLocation');
 
 function renderSales(localSales) {
-let h2 = document.createElement('h2');
-h2.textContent = localSales.name;
-salesContainerElement.appendChild(h2);
+    let h2 = document.createElement('h2');
+    h2.textContent = localSales.name;
+    salesContainerElement.appendChild(h2);
 
-let ul = document.createElement('ul');
-  salesContainerElement.appendChild(ul);
+    let ul = document.createElement('ul');
+    salesContainerElement.appendChild(ul);
 
-for (let i = 1; i < localSales.cookieTotalPerHour.length; i++) {
-    const li = document.createElement('li');
-    li.textContent = hours[i] + ': ' + localSales.cookieTotalPerHour[i] + ' cookies';
-       ul.appendChild(li);
+    for (let i = 1; i < localSales.cookieTotalPerHour.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = hours[i] + ': ' + localSales.cookieTotalPerHour[i] + ' cookies';
+        ul.appendChild(li);
 
-}
+    }
 
 }
 
