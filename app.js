@@ -114,7 +114,7 @@ function salesHours(location) {
     }
 }
 
-// call for sales Hours function
+// call for sales Hours function also sets seprate objects for location calls
 salesHours(seattle);
 salesHours(tokyo);
 salesHours(dubai);
@@ -147,7 +147,7 @@ function renderSales(localSales) {
     salesContainerElement.appendChild(ul);
     
     let totalSold = 0;
-    
+
     for (let i = 1; i < localSales.cookieTotalPerHour.length; i++) {
         let salesItem = document.createElement('li');
         ul.appendChild(salesItem);
