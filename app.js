@@ -2,7 +2,7 @@
 
 'use strict';
 
-let hours = ['', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM']
+let hours = ['', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM' ];
 
 //seattle sales data object
 let seattle = {
@@ -140,21 +140,28 @@ let salesContainerElement = document.getElementById('salesDataByLocation');
 
 function renderSales(localSales) {
     let h2 = document.createElement('h2');
-    h2.textContent = localSales.name;
     salesContainerElement.appendChild(h2);
-
+    h2.textContent = localSales.name
+    
     let ul = document.createElement('ul');
     salesContainerElement.appendChild(ul);
-
+    
+    let totalSold = 0;
+    
     for (let i = 1; i < localSales.cookieTotalPerHour.length; i++) {
-        const li = document.createElement('li');
-        li.textContent = hours[i] + ': ' + localSales.cookieTotalPerHour[i] + ' cookies';
-        ul.appendChild(li);
-
+        let salesItem = document.createElement('li');
+        ul.appendChild(salesItem);
+        let cookiesSoldThisHour = localSales.cookieTotalPerHour[i];
+        totalSold += cookiesSoldThisHour;
+        let salesInfo = `${hours[i]} ${cookiesSoldThisHour}  cookies`;
+        salesItem.textContent = salesInfo;
     }
 
+    let totalItem = document.createElement('li');
+    ul.appendChild(totalItem);
+    let totalInfo = `Total: ${totalSold} cookies sold`;
+    totalItem.textContent = totalInfo;
 }
-
 
 
 renderSales(seattle);
