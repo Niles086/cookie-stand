@@ -2,7 +2,7 @@
 
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 
-// Constructor function for Salmon Cookie Stand
+// Constructor function for Salmon Cookie Stand alwase use CAPITAL LETTER FOR 1ST LETTER
 function SalmonCookieStand(name, minCustomers, maxCustomers, aveCookie) {
     this.name = name;
     this.minCustomers = minCustomers;
