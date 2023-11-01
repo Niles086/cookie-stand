@@ -60,14 +60,11 @@ font: arial;
   th {
     background-color: grey;
     color: white;
-}
+  }
 td {
     background-color: salmon;
-}
+   }
 
-td {
-    
-}
 
 table {
     border-collapse: collapse; /* Removes cell spacing */

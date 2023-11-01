@@ -104,7 +104,7 @@ for (let location of [seattle, tokyo, dubai, paris, lima]) {
     }
 
     // Add the cell for the daily total
-    const dailyTotalCell = document.createElement('td');
+    const dailyTotalCell = document.createElement('th');
     dataRow.appendChild(dailyTotalCell);
     dailyTotalCell.textContent = dailyTotal;
 }
@@ -146,3 +146,8 @@ const dataCells = document.querySelectorAll('td');
 dataCells.forEach((cell) => {
     cell.style.border = "1px solid #000"; // 1px solid black border for cells
 });
+
+// Add the extra cell
+const extraCell = document.createElement('th');
+hourlyTotalsRow.appendChild(extraCell);
+extraCell.textContent = "Extra Data";
