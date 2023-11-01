@@ -3,37 +3,81 @@
   }
   
   header {
-    background-color: lightgray;
-    padding: 10px;
-  }
+    background-color: black;
+    padding: 1px;
+    color: salmon;
+    
+      }
   
-
+  li {
+font: arial;
+  }
   
   article {
     margin-right: 50px;
-    border: 5px solid lightgray;
+    border: 5px solid white;
     padding-left: 10px;
     padding-right: 10px;
+    font: arial;
   }
   
   h1 {
     font-family: 'Agbalumo', cursive;
+    text-align: center;
+   
   }
   
-  h1, nav {
+  /* h1, {
     display: inline-block;
-  }
+  } */
   
   nav {
-    margin-left: 50px;
+    
+    background-color: salmon;
+    padding-bottom: 23px;
+    
   }
   
   a {
     margin: 10px;
+    color: black;
   }
   
   footer {
     padding: 10px;
-    background-color: lightgray;
+    background-color: white;
     margin-top: 10px;
   }
+
+  .container {
+    text-align: center;
+  }
+  
+  .container img {
+    display: inline-block; /* Make sure the image is treated as an inline-block element. */
+  }
+
+  th {
+    background-color: grey;
+    color: white;
+}
+td {
+    background-color: salmon;
+}
+
+td {
+    
+}
+
+table {
+    border-collapse: collapse; /* Removes cell spacing */
+}
+
+td, th {
+    padding: 0; /* Removes cell padding */
+    border: 1px solid #000; /* Add borders if desired */
+}
+table {
+    margin: 0 auto; /* Horizontal centering */
+    margin-top: 50px; /* Vertical centering, adjust as needed */
+}
