@@ -146,8 +146,15 @@ const dataCells = document.querySelectorAll('td');
 dataCells.forEach((cell) => {
     cell.style.border = "1px solid #000"; // 1px solid black border for cells
 });
+// Initialize a variable to store the total for all locations
+let totalForAllLocations = 0;
 
+for (let location of [seattle, tokyo, dubai, paris, lima]) {
+    for (let i = 0; i < location.cookieTotalPerHour.length; i++) {
+        totalForAllLocations += location.cookieTotalPerHour[i];
+    }
+}
 // Add the extra cell
 const extraCell = document.createElement('th');
 hourlyTotalsRow.appendChild(extraCell);
-extraCell.textContent = "Extra Data";
+extraCell.textContent = totalForAllLocations; 
