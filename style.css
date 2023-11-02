@@ -70,7 +70,7 @@ table {
     border-collapse: collapse; /* Removes cell spacing */
 }
 
-td, th {
+t th {
     padding: 0; /* Removes cell padding */
     border: 1px solid #000; /* Add borders if desired */
 }

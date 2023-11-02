@@ -138,7 +138,7 @@ for (let total of hourlyTotals) {
 for (let location of [seattle, tokyo, dubai, paris, lima]) {
     const dataRow = document.createElement('tr');
     tableElem.appendChild(dataRow);
-    dataRow.style.borderBottom = "1px solid #000"; // 1px solid black border between rows
+    dataRow.style.borderBottom = "2px solid #000"; // 1px solid black border between rows
 }
 
 // Set cell borders for all data cells
