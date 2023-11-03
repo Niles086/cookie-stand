@@ -8,7 +8,7 @@ code 201 cookie stand lab
 
 1. **hours**: An array that stores the opening hours for the cookie stands.
 
-1. **SalmonCookieStand: A constructor function for creating instances of cookie stands with properties like name, minimum customers, maximum customers, and average cookies per customer.
+1. **SalmonCookieStand**: A constructor function for creating instances of cookie stands with properties like name, minimum customers, maximum customers, and average cookies per customer.
 
 1. **seattle**, **tokyo**, **dubai**, **paris**, **lima**: Instances of the SalmonCookieStand constructor, each representing a specific cookie stand location (Seattle, Tokyo, Dubai, Paris, Lima) with its properties and data.
 

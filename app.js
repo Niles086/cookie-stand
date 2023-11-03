@@ -2,6 +2,8 @@
 
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 
+let locations = [];
+
 // Constructor function for Salmon Cookie Stand alwase use CAPITAL LETTER FOR 1ST LETTER
 function SalmonCookieStand(name, minCustomers, maxCustomers, aveCookie) {
     this.name = name;
@@ -12,7 +14,6 @@ function SalmonCookieStand(name, minCustomers, maxCustomers, aveCookie) {
     this.cookieTotalPerHour = [];
     this.dailyTotal = 0;
 }
-
 // Method to calculate customers per hour
 SalmonCookieStand.prototype.customerTotal = function () {
     for (let hour = 0; hour < hours.length; hour++) {
@@ -34,7 +35,7 @@ let tokyo = new SalmonCookieStand('Tokyo', 3, 24, 1.2);
 let dubai = new SalmonCookieStand('Dubai', 11, 38, 3.7);
 let paris = new SalmonCookieStand('Paris', 20, 38, 2.3);
 let lima = new SalmonCookieStand('Lima', 2, 16, 4.6);
-
+let trying = new SalmonCookieStand()
 // Call the customerTotal and cookieTotal methods
 seattle.customerTotal();
 seattle.cookieTotal();
@@ -54,6 +55,7 @@ function getRandomNumber(min, max) {
     let randomInt = Math.floor(randomFloat);
     let result = randomInt + min;
     return result;
+
 }
 
 // Element to contain sales data
@@ -70,7 +72,7 @@ tableElem.appendChild(headerRow);
 // Add the header cell for "Location"
 const locationHeaderCell = document.createElement('th');
 headerRow.appendChild(locationHeaderCell);
-locationHeaderCell.textContent = "Location";
+locationHeaderCell.textContent = 'Location';
 
 // Add the header cells for each hour
 for (let i = 0; i < hours.length; i++) {
@@ -82,10 +84,10 @@ for (let i = 0; i < hours.length; i++) {
 // Add the "Location Totals" header cell
 const totalsHeaderCell = document.createElement('th');
 headerRow.appendChild(totalsHeaderCell);
-totalsHeaderCell.textContent = "Location Totals";
+totalsHeaderCell.textContent = 'Location Totals';
 
 // Create the data rows for each location
-for (let location of [seattle, tokyo, dubai, paris, lima]) {
+for (let location of [seattle, tokyo, dubai, paris, lima, ]) {
     const dataRow = document.createElement('tr');
     tableElem.appendChild(dataRow);
 
@@ -157,4 +159,35 @@ for (let location of [seattle, tokyo, dubai, paris, lima]) {
 // Add the extra cell
 const extraCell = document.createElement('th');
 hourlyTotalsRow.appendChild(extraCell);
-extraCell.textContent = totalForAllLocations; 
+extraCell.textContent = totalForAllLocations;
+
+
+// Event listener for form submission
+const form = document.getElementById('addStoreForm');
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // Get the form input values
+    const name = event.target.name.value; // Use names as the input field name
+    const minCustomers = parseInt(event.target.minCustomers.value);
+    const maxCustomers = parseInt(event.target.maxCustomers.value);
+    const aveCookie = parseFloat(event.target.aveCookie.value);
+
+    // Create a new SalmonCookieStand instance
+    const newLocation = new SalmonCookieStand(name, minCustomers, maxCustomers, aveCookie);
+    console.log(newLocation)
+    // Call the customerTotal and cookieTotal methods
+    newLocation.customerTotal();
+    newLocation.cookieTotal();
+
+    // Add the new location to the locations array
+    locations.push(newLocation); 
+
+    // Clear the form
+    event.target.reset();
+
+    
+}
+
+form.addEventListener('submit', handleSubmit);

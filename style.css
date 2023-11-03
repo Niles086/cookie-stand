@@ -1,97 +1,115 @@
 * {
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: black;
-    padding: 1px;
-    color: salmon;
-    
-      }
-  
-  li {
-font: arial;
-  }
-  
-  article {
-    margin-right: 50px;
-    border: 5px solid white;
-    padding-left: 10px;
-    padding-right: 10px;
-    font: arial;
-  }
-  
-  h1 {
-    font-family: 'Agbalumo', cursive;
-    text-align: center;
-   
-  }
-  
-  /* h1, {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+  padding: 1px;
+  color: salmon;
+
+}
+
+li {
+  font: arial;
+}
+
+article {
+  margin-right: 50px;
+  border: 5px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font: arial;
+}
+
+h1 {
+  font-family: 'Agbalumo', cursive;
+  text-align: center;
+
+}
+
+/* h1, {
     display: inline-block;
   } */
-  
-  nav {
-    
-    background-color: salmon;
-    padding-bottom: 23px;
-    
-  }
-  
-  a {
-    margin: 10px;
-    color: black;
-  }
-  
-  footer {
-    padding: 10px;
-    background-color: white;
-    margin-top: 10px;
-  }
 
-  .container {
-    text-align: center;
-  }
-  
-  .container img {
-    display: inline-block; /* Make sure the image is treated as an inline-block element. */
-  }
+nav {
 
-  th {
-    background-color: grey;
-    color: white;
-  }
+  background-color: salmon;
+  padding-bottom: 23px;
+
+}
+
+a {
+  margin: 10px;
+  color: black;
+}
+
+footer {
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.container {
+  text-align: center;
+}
+
+.container img {
+  display: inline-block;
+  /* Make sure the image is treated as an inline-block element. */
+}
+
+th {
+  background-color: grey;
+  color: white;
+}
+
 td {
-    background-color: salmon;
-   }
+  background-color: salmon;
+}
 
 
 table {
-    border-collapse: collapse; /* Removes cell spacing */
+  border-collapse: collapse;
+  /* Removes cell spacing */
 }
 
 t th {
-    padding: 0; /* Removes cell padding */
-    border: 1px solid #000; /* Add borders if desired */
+  padding: 0;
+  /* Removes cell padding */
+  border: 1px solid #000;
+  /* Add borders if desired */
 }
+
 table {
-    margin: 0 auto; /* Horizontal centering */
-    margin-top: 50px; /* Vertical centering, adjust as needed */
+  margin: 0 auto;
+  /* Horizontal centering */
+  margin-top: 50px;
+  /* Vertical centering, adjust as needed */
+  width: 1000px;
+  height: 300px;
 }
 
-.div {
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+#addStoreForm {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 50px;
+  position: relative; /* Set the parent container to a relative position */
+  margin-left: 70px;
+  margin-right: 70px;
+  }
 
-    #userInput {
-        text-align: center;
-        padding: 20px;
-        border: 1px solid white;
-        border-radius: 5px;
-    }
-  
+  .top-left-text {
+    position: absolute; /* Position the text absolutely within the parent container */
+    top: -25px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    color: salmon;
+    background-color: white;
+      }
+
+.button {
+  margin-left: 10px;
+}

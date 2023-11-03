@@ -24,24 +24,25 @@
 
     <main>
         <!-- added buttons for user input still need to connect to  table -->
-        <div id="userInput">
-            <label id="lName" for="locationName">Location Name:</label>
-            <input type="text" id="locationName" placeholder="Enter location name">
+        <form id="addStoreForm">
+            <p class="top-left-text">Add a new store to the table!!!</p>
+            
+            <label for="name">Location Name:</label>
+            <input type="text" name="name">
         
-            <label id="minCust" for="minCustomers">Min Customers:</label>
-            <input type="number" step="0.1" id="aveCookie" placeholder="Enter Min Customersr">
+            <label for="minCustomers">Minimum Customers Per Hour</label>
+            <input type="number" step="0.1" name="minCustomers">
             </select>
         
-            <label id="maxCust" for="maxCustomers">Max Customers:</label>
-            <input type="number" step="0.1" id="aveCookie" placeholder="Enter Max Customersr">
+            <label for="maxCustomers">Maximum Customers Per Hour</label>
+            <input type="number" step="0.1" name="maxCustomers">
             </select>
         
-            <label id="aveCookie" for="aveCookie">Average Cookies per Customer:</label>
-            <input type="number" step="0.1" id="aveCookie" placeholder="Enter average cookies per customer">
-        
-            <button id="addLocation">Add Location</button>
-        </div>
-        
+            <label for="aveCookie">Average Cookies per Sale</label>
+            <input type="number" step="0.1" name="aveCookie">
+
+            <button class="button" type="submit">Click here to add!</button>
+            </form>        
         <article id="salesDataByLocation">
             <!-- location names -->
             <h2></h2>
