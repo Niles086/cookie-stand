@@ -112,7 +112,7 @@ for (let location of [seattle, tokyo, dubai, paris, lima, ]) {
 }
 
 // Add the "Hourly Totals" row
-const hourlyTotalsRow = document.createElement('tr');
+const hourlyTotalsRow = document.createElement('tfoot');
 tableElem.appendChild(hourlyTotalsRow);
 
 // Add the cell for "Hourly Totals"
