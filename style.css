@@ -53,9 +53,10 @@ footer {
   text-align: center;
 }
 
-.container img {
-  display: inline-block;
-  /* Make sure the image is treated as an inline-block element. */
+footer {
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
 }
 
 th {
@@ -73,20 +74,70 @@ table {
   /* Removes cell spacing */
 }
 
-t th {
-  padding: 0;
-  /* Removes cell padding */
-  border: 1px solid #000;
-  /* Add borders if desired */
-}
+
 
 table {
   margin: 0 auto;
   /* Horizontal centering */
   margin-top: 50px;
   /* Vertical centering, adjust as needed */
-  width: 1000px;
+  width: 1200px;
   height: 300px;
+ 
+}
+
+
+
+  .top-left-text {
+    position: absolute; /* Position the text absolutely within the parent container */
+    top: -25px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    color: salmon;
+    background-color: white;
+    font-weight: bold;
+      }
+
+.button {
+  margin-left: 40px;
+}
+
+#footerRow {
+  height: 10px; /* Adjust the height as needed */
+}
+
+table {
+  width: 79%; /* Set the table width to 100% of its container */
+  
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+th, td {
+ 
+  padding: 0.9%; /* Add padding for better spacing */
+  text-align: center; /* Center text in cells */
+  width: 20px; /* Set a fixed width for each cell */
+}
+
+.button {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 30px;
+  font-size: small;
+
+}
+
+#addStoreForm input[type="text"] {
+  width: 150px; 
+  margin-left: 10px;
+}
+
+#addStoreForm input[type="number"] {
+  width: 130px; 
+  margin-left: 5px;
 }
 
 #addStoreForm {
@@ -98,18 +149,21 @@ table {
   border-radius: 4px;
   margin-top: 50px;
   position: relative; /* Set the parent container to a relative position */
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 60px;
+  margin-right: 60px;
   }
-
-  .top-left-text {
-    position: absolute; /* Position the text absolutely within the parent container */
-    top: -25px; /* Adjust the top position as needed */
-    left: 10px; /* Adjust the left position as needed */
-    color: salmon;
-    background-color: white;
-      }
-
-.button {
-  margin-left: 10px;
+#l2 {
+  padding-right: 25px;
 }
+
+#l3 {
+  padding-right: 25px;
+}
+#l4 {
+  padding-right: 10px;
+}
+  
+#l1 {
+  padding-right: 10px;
+}
+   
