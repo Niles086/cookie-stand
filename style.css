@@ -112,7 +112,8 @@ table {
 }
 
 th, td {
- 
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
   padding: 0.9%; /* Add padding for better spacing */
   text-align: center; /* Center text in cells */
   width: 20px; /* Set a fixed width for each cell */
@@ -167,3 +168,20 @@ label {
   padding-right: 10px;
 }
    
+#ul1 {
+ font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+#ul2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#ul3 {
+  font-family: 'Times New Roman', Times, serif;
+ 
+}
+#salesDataByLocation {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
